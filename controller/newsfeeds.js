@@ -27,7 +27,7 @@ module.exports.newsfeedsList = function(req, res, next) {
         else
         {
             res.render('newsfeeds/list', {
-                title: 'News Feeds',
+                title: 'NewsFeed List',
                 section: 'NewsFeed',
                 NewsFeedList: newsfeedsList,
                 userName: req.user ? req.user.username : ''
