@@ -26,7 +26,12 @@
           </li>
           <li>  
             <% if (typeof userName == 'string' && userName) { %>
-              <a href="" >News Feed</a>
+              <a <% if(section=='NewsFeed'){ %>class="active"<% } %> href="/newsfeeds/list" >News Feed</a>
+            <% } %>       
+          </li>
+          <li>  
+            <% if (typeof userName == 'string' && userName) { %>
+              <a href="/newsfeeds/add" >Post Activity</a>
             <% } %>       
           </li>
           <li>  

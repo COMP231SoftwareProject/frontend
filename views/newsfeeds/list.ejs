@@ -1,11 +1,47 @@
 <%- include ('../partials/header') %>
 
+    <!-- <%= NewsFeedList %> -->
+
   <!-- Main Content -->
   <main class="w3-content">
     <div class="row">
         <h2><%= title %></h2>
         <br>
-        
+        <div>
+            <a href="/newsfeeds/add" class="w3-button w3-light-grey w3-padding-medium w3-margin-top" role="button">
+                <i class="fa fa-plus-circle"></i> 
+                Post a new Activity
+            </a>                
+        </div>
+        <br>
+        <div class="table-responsive">
+            <table  class="w3-table-all w3-large w3-hoverable w3-card-4" style="table-layout: fixed; width: 100%">
+                <!-- Header-->
+                <thead>
+                    <tr class="w3" style="background-color: #76c8f4">
+                        <th class="w3-left-align">Subject</th>
+                        <th class="w3-left-align">Text</th>
+                        <th class="w3-right-align">Update</th>
+                        <th class="w3-right-align">Delete</th>
+                    </tr>
+                </thead>
+                <!-- Rows -->
+                <% for(let count = 0; count < NewsFeedList.length; count++) { %>
+                    <tr>
+                        <td class="w3-left-align-"><%= NewsFeedList[count].subject %></td>
+                        <td class="w3-left-align"><%= NewsFeedList[count].text %></td>
+                        <td class="w3-right-align">
+                            <a href="/newsfeeds/edit/<%= NewsFeedList[count]._id %>" class="w3-button w3-gray">
+                            <i class="fa fa-pencil"></i></a>
+                        </td>
+                        <td class="w3-right-align">
+                            <a href="/newsfeeds/delete/<%= NewsFeedList[count]._id %>" class="w3-button w3-red">
+                            <i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
     </div>
 </main>
 <%- include ('../partials/footer') %>
