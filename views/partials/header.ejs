@@ -21,7 +21,12 @@
           <li><a <% if(section=='Home'){ %>class="active"<% } %> href="/">Home</a></li>
           <li>  
             <% if (typeof userName == 'string' && userName) { %>
-              <a href="" >Country Cases</a>
+              <a <% if(section=='VaccinationCenters'){ %>class="active"<% } %> href="/vaccination_centers" >Vaccination Centers</a>
+            <% } %>       
+          </li>
+          <li>  
+            <% if (typeof userName == 'string' && userName) { %>
+              <a <% if(section=='Statistics'){ %>class="active"<% } %> href="/Statistics" >Statistics</a>
             <% } %>       
           </li>
           <li>  
@@ -36,7 +41,7 @@
           </li>
           <li>  
             <% if (typeof userName == 'string' && userName) { %>
-              <a href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>
+              <a href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %> : <%= userRole %>)</a>
             <% } else { %>
               <a <% if(section=='Users'){ %>class="active"<% } %>href="/users/signin">Sign In</a>
             <% } %>            

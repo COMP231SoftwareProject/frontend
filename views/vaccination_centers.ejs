@@ -1,0 +1,95 @@
+<%- include('partials/header')%>
+
+
+  <!-- Main Content -->
+  <main class="w3-content">
+    <div class="row">
+        <h2>Vaccination Centre - <%= userRole %></h2>
+        <br>
+        <form action="https://www.google.com/maps?" class="searchform" method="get" name="searchform" target="_blank">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="location" value="covid vaccines near me"  type="text" >
+            <button class="button" type="submit">Search</button>
+        </form>
+        <br>
+        <div class="table-responsive">
+            <table  class="w3-table-all w3-large w3-hoverable w3-card-4" style="table-layout: fixed; width: 100%">
+                <!-- Header-->
+                <thead>
+                    <tr class="w3" style="background-color: #76c8f4">
+                        <th class="w3-left-align">Center</th>
+                        <th class="w3-left-align">Address</th>
+                        <th class="w3-left-align">Days</th>
+                        <th class="w3-left-align">Hours</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://stores.shoppersdrugmart.ca/en/store/1281/?utm_source=G&utm_medium=lpm&utm_campaign=LPM_SDM" >Shoppers Drug Mart</a></td>
+                    <td class="w3-left-align">292 Dupont St, Toronto, ON M5R 1V9</td>
+                    <td class="w3-left-align-">Monday - Sunday</td>
+                    <td class="w3-left-align">8am-12am</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://www.rexall.ca/storelocator/store/8145?utm_source=G&utm_medium=LPM&utm_campaign=RexallPharmaPlus" >Rexall</a></td>
+                    <td class="w3-left-align">87 Avenue Rd, Toronto, ON M5R 3R9</td>
+                    <td class="w3-left-align-">Monday - Sunday</td>
+                    <td class="w3-left-align">8am-6pm (8am-8pm Sat-Sun)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://www.snowdoncompounding.com/" >Snowdon Guardian Compounding Pharmacy</a></td>
+                    <td class="w3-left-align">264 Bloor St W, Toronto, ON M5S 1V8</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-6pm (10am-2pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="http://www.metrodrugs.ca/" >Metro Drugs</a></td>
+                    <td class="w3-left-align">844 Bathurst St, Toronto, ON M5R 3G1</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-6pm (9am-5pm Fri, 9am-2pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://pharmasave.com/toronto-spadina" >Pharmasave Spadina's Neighborhood Pharmacy</a></td>
+                    <td class="w3-left-align">720 Spadina Ave. #100, Toronto, ON M5S 2T9</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9:30am-6pm (9:30am-5:30pm Fri, 10am-2pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="http://www.bathurstpharmacy.ca/" >Bathurst & Bloor IDA Pharmacy</a></td>
+                    <td class="w3-left-align">800 Bathurst St, Toronto, ON M5R 3G1</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-7pm (10am-3pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://everestpharmacy.ca/" >Everest Whole Health Pharmacy</a></td>
+                    <td class="w3-left-align">2 St Thomas St Suite 100, Toronto, ON M5S 2Z1</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-6pm (9am-1pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://www.pharmachoice.com/locations/green-pharmacy/" >Green Pharmacy PharmaChoice</a></td>
+                    <td class="w3-left-align">620 Bloor St W, Toronto, ON M6G 1K7</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-6pm (9am-2pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="" >Bloor Park Pharmacy</a></td>
+                    <td class="w3-left-align">728 Bloor St W, Toronto, ON M6G 1L4</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-6pm (9am-1pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://www.google.com/maps?rlz=1C5CHFA_enUS947US947&lqi=CiFjb3ZpZCB2YWNjaW5hdGlvbiBjZW50cmVzIHRvcm9udG8iA_ABAUiGmKS_5YCAgAhaNRAAEAEQAhgDIiFjb3ZpZCB2YWNjaW5hdGlvbiBjZW50cmVzIHRvcm9udG8qCAgDEAAQARACkgEIcGhhcm1hY3mqASEQASodIhljb3ZpZCB2YWNjaW5hdGlvbiBjZW50cmVzKACwAQI&vet=12ahUKEwil_f7P2fv7AhUVkIkEHdmWAiEQ8UF6BAgDEBQ..i&lei=Lh2bY6WuApWgptQP2a2KiAI&cs=0&um=1&ie=UTF-8&fb=1&gl=ca&sa=X&geocode=KZPcuu2MNCuIMc2qCCEanTal&daddr=728+Bloor+St+W,+Toronto,+ON+M6G+1L4" >Pharmasave SanoMed Pharmacy & Compounding Centre</a></td>
+                    <td class="w3-left-align">1000 Bay St. Unit 1, Toronto, ON M5S 3A8</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-7pm (10am-4pm Sat)</td>
+                </tr>
+                <tr>
+                    <td class="w3-left-align-"><a href="https://www.google.com/maps?rlz=1C5CHFA_enUS947US947&lqi=CiFjb3ZpZCB2YWNjaW5hdGlvbiBjZW50cmVzIHRvcm9udG8iA_ABAUj8kOacrI-AgAhaNRAAEAEQAhgDIiFjb3ZpZCB2YWNjaW5hdGlvbiBjZW50cmVzIHRvcm9udG8qCAgDEAAQARACkgEJZHJ1Z3N0b3JlqgEhEAEqHSIZY292aWQgdmFjY2luYXRpb24gY2VudHJlcygAsAEC&vet=12ahUKEwil_f7P2fv7AhUVkIkEHdmWAiEQ8UF6BAgDEBQ..i&lei=Lh2bY6WuApWgptQP2a2KiAI&cs=0&um=1&ie=UTF-8&fb=1&gl=ca&sa=X&geocode=KTtxgjeLNCuIMUsnnrNBeV_B&daddr=799+Bloor+St+W,+Toronto,+ON+M6G+1L8" >Omni Pharmac</a>y</td>
+                    <td class="w3-left-align">799 Bloor St W, Toronto, ON M6G 1L8</td>
+                    <td class="w3-left-align-">Monday - Saturday</td>
+                    <td class="w3-left-align">9am-7pm (9am-3pm Sat)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+<%- include('partials/footer')%>

@@ -30,7 +30,8 @@ module.exports.newsfeedsList = function(req, res, next) {
                 title: 'NewsFeed List',
                 section: 'NewsFeed',
                 NewsFeedList: newsfeedsList,
-                userName: req.user ? req.user.username : ''
+                userName: req.user ? req.user.username : '',
+                userRole: req.user ? req.user.userrole : ''
             })            
         }
     });
@@ -53,7 +54,8 @@ module.exports.displayEditPage = (req, res, next) => {
                 section: 'NewsFeed',
                 messages: req.flash('error'),
                 item: itemToEdit,
-                userName: req.user ? req.user.username : ''
+                userName: req.user ? req.user.username : '',
+                userRole: req.user ? req.user.userrole : ''
             })
         }
     });
@@ -79,7 +81,8 @@ module.exports.processEditPage = (req, res, next) => {
                         section: 'NewsFeed',
                         messages: req.flash('error'),
                         item: updatedItem,
-                        userName: req.user ? req.user.username : ''
+                        userName: req.user ? req.user.username : '',
+                        userRole: req.user ? req.user.userrole : ''
             });
         }
         else
@@ -119,7 +122,8 @@ module.exports.displayAddPage = (req, res, next) => {
         section: 'NewsFeed',
         messages: req.flash('error'),
         item: newItem,
-        userName: req.user ? req.user.username : ''
+        userName: req.user ? req.user.username : '',
+        userRole: req.user ? req.user.userrole : ''
     })          
 
 }
@@ -142,7 +146,8 @@ module.exports.processAddPage = (req, res, next) => {
                         section: 'NewsFeed',
                         messages: req.flash('error'),
                         item: newItem,
-                        userName: req.user ? req.user.username : ''
+                        userName: req.user ? req.user.username : '',
+                        userRole: req.user ? req.user.userrole : ''
             });
         }
         else

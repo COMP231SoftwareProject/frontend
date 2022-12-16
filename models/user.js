@@ -23,6 +23,10 @@ let UserSchema = mongoose.Schema(
                 return password && password.length > 6;
             }, 'Password should be longer']
         },
+        userrole: {
+            type: String,
+            required: 'User Role is required'
+        },
         salt: {
             type: String
         },
